@@ -14,7 +14,7 @@ if (age < 18) {
     console.log("requisito sconto minorenne") 
     let finalPrice = fullPrice - (fullPrice * 0.2)
     let roundedPrice = finalPrice.toFixed(2)
-    console.log("prezzo con sconto young",roundedPrice)
+    console.log("prezzo con sconto giovane",roundedPrice)
     document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
 } else {
     let roundedPrice = fullPrice.toFixed(2)
@@ -26,7 +26,7 @@ if (age >= 65) {
     console.log("requisito sconto over65")  
     let finalPrice = fullPrice - (fullPrice * 0.4)
     let roundedPrice = finalPrice.toFixed(2)
-    console.log("prezzo con sconto over65",roundedPrice)
+    console.log("prezzo con sconto over",roundedPrice)
     document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
 } else {
     let roundedPrice = fullPrice.toFixed(2)
