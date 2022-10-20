@@ -13,7 +13,7 @@ if (age < 18) {
     let roundedPrice = finalPrice.toFixed(2)
     console.log("prezzo con sconto giovane",roundedPrice)
 } else {
-    let finalPrice = fullPrice.toFixed(2)
+    let roundedPrice = fullPrice.toFixed(2)
     
 } 
 
@@ -21,11 +21,12 @@ if (age >= 65) {
      
     let finalPrice = fullPrice - (fullPrice * 0.4)
     let roundedPrice = finalPrice.toFixed(2)
-    console.log("prezzo con sconto over",finalPrice)
+    console.log("prezzo con sconto over",roundedPrice)
 } else {
-    let finalPrice = fullPrice.toFixed(2)
+    let roundedPrice = fullPrice.toFixed(2)
     
 }
+
 
 
 //MOSTRO IL PREZZO FINALE 
