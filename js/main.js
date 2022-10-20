@@ -5,29 +5,27 @@ const age = Number(prompt("Inserisci la tua età"));
 //CALCOLO IL PREZZO DEL BIGLIETTO INTERO (0,21 EURO AL KM)
 const fullPrice = km * 0.21
 console.log("prezzo di listino",fullPrice);
-//SE L'ETA' E MINORE DI 18 ANNI APPLICO SCONTO 20%
+//CONDIZIONI DI SCONTO
 
 if (age < 18) {
      
     let finalPrice = fullPrice - (fullPrice * 0.2)
-    console.log("prezzo con sconto giovane",finalPrice)
+    let roundedPrice = finalPrice.toFixed(2)
+    console.log("prezzo con sconto giovane",roundedPrice)
 } else {
-    let finalPrice = fullPrice
+    let finalPrice = fullPrice.toFixed(2)
     
 } 
 
 if (age >= 65) {
      
     let finalPrice = fullPrice - (fullPrice * 0.4)
+    let roundedPrice = finalPrice.toFixed(2)
     console.log("prezzo con sconto over",finalPrice)
 } else {
-    let finalPrice = fullPrice
+    let finalPrice = fullPrice.toFixed(2)
     
 }
 
-
-// ALTRIMENTI PREZZO INTERO
-//SE L'ETA' E' MAGGIORE O UGUALE A 65 ANNI APPLICO SCONTO DEL 40%
-// ALTRIMENTI PREZZO INTERO
 
 //MOSTRO IL PREZZO FINALE 
