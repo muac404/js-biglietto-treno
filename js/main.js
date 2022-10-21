@@ -5,38 +5,26 @@ const km = Number(prompt("Inserisci i km che vuoi percorrere"));
 //CHIEDO ALL'UTENTE LA SUA ETA'
 const age = Number(prompt("Inserisci la tua età"));
 //CALCOLO IL PREZZO DEL BIGLIETTO INTERO (0.21 EURO AL KM)
-const fullPrice = km * 0.21
-console.log("prezzo di listino",fullPrice);
-//CONDIZIONI DI SCONTO
+let price = km * 0.21;
+let message = "Prezzo del biglietto intero";
+
+
 
 
 if (age < 18) {
-    console.log("requisito sconto minorenne") 
-    let finalPrice = fullPrice - (fullPrice * 0.2)
-    let roundedPrice = finalPrice.toFixed(2)
-    console.log("prezzo con sconto giovane",roundedPrice)
-    document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
-} else {
-    let roundedPrice = fullPrice.toFixed(2)
-    document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
     
+    price = price - (price * 0.2)
+    message = "Prezzo tariffa minorenni";
+    
+} else if (age >= 65){
+    price = price - (price * 0.4)
+    message = "Prezzo tariffa over 65"
 } 
 
-if (age >= 65) {
-    console.log("requisito sconto over65")  
-    let finalPrice = fullPrice - (fullPrice * 0.4)
-    let roundedPrice = finalPrice.toFixed(2)
-    console.log("prezzo con sconto over",roundedPrice)
-    document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
-} else {
-    let roundedPrice = fullPrice.toFixed(2)
-    document.getElementById("prezzo-biglietto").innerHTML=roundedPrice + " €";
-    
-}
+console.log(`${price.toFixed(2)}€`);
+console.log(message);
+
+document.getElementById("prezzo-biglietto").innerHTML=`${price.toFixed(2)}€`;
 
 
 
-
-
-
-//MOSTRO IL PREZZO FINALE 
